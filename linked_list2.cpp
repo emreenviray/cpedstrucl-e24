@@ -16,15 +16,13 @@ public:
     void addValue(int val){
         Node *n = new Node();   
         n->x = val;             
-        n->next = head;         
-                               
+        n->next = head;                         
         head = n;              
     }
 
     int popValue(){
         Node *n = head;
         int ret;
-        
 		if (head==NULL){
 			return NULL;
 		}
@@ -34,9 +32,7 @@ public:
 			delete n;
         	return ret;
 		   }
-   		
     }
-    
     void menu(){
     	cout<<"MAIN MENU\n";
     	cout<<"1 - Insert into linked list\n";
@@ -57,7 +53,6 @@ int main() {
 		list.menu();
 		cout<<"---\nEnter choice: ";
 		cin>>choice;
-		
 		switch(choice){
 			case 1: {
 				cout<<"\nEnter Number: ";
@@ -67,14 +62,12 @@ int main() {
 			}
 			case 2: {
 				n = list.popValue();
-				
 				if (n==NULL){
 					cout<<"\nNothing to pop. Add value first."; 
 				}
 				else{
 					cout<<"\n"<< n <<" has been deleted.";
 				}
-
 				getch();
 				break;
 			}
