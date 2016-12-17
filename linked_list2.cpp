@@ -26,7 +26,7 @@ public:
         int ret;
         
 		if (head==NULL){
-			return -1;
+			return NULL;
 		}
 		else{
 			ret = n->x;
@@ -68,7 +68,7 @@ int main() {
 			case 2: {
 				n = list.popValue();
 				
-				if (n==-1){
+				if (n==NULL){
 					cout<<"\nNothing to pop. Add value first."; 
 				}
 				else{
