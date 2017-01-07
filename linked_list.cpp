@@ -119,7 +119,6 @@ int adelete(int num) {
       if (temp == head) {
         head = temp -> next;
         free(temp);
-        temp = prev ->next;
       } else {
         prev -> next = temp -> next;
         free(temp);
